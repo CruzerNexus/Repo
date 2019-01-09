@@ -13,15 +13,12 @@ while True:
     if type(cash) is int:
         break
 dollars = cash // 100
-cash = cash % 100
-if cash != 0:
-    quarters = cash // 25
-    cash = cash % 25
-    if cash != 0:
-        dimes = cash // 10
-        cash = cash % 10
-        if cash != 0:
-            nickels = cash // 5
-            pennies = cash % 5
+cash %= 100
+quarters = cash // 25
+cash %= 25
+dimes = cash // 10
+cash %= 10
+nickels = cash // 5
+pennies = cash
 
 print(f"There are {dollars} dollars, {quarters} quarters, {dimes} dimes, {nickels} nickels, and {pennies} pennies.")
