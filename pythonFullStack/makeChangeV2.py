@@ -5,8 +5,10 @@ nickels = 0
 pennies = 0
 while True:
     cash = input("Please enter amount in dollars (x.xx): $")
+    print(cash)
     cash = float(cash)
-    cash = cash * 100
+    cash = (cash * 100)
+    cash = round(cash)
     cash = int(cash)
     if type(cash) is int:
         break
