@@ -27,7 +27,6 @@ def metersToDist(x, z):
     else:
         return x
 
-
 x = input("Enter a distance: ")
 y = input("Enter starting unit (ft, mi, m, km, yd, or in): ")
 z = input("Enter ending unit (ft, mi, m, km, yd, or in): ")
