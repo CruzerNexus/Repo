@@ -80,5 +80,3 @@ def intToEng(x):
 
 x = input("Enter a number between 0 and 999: ")
 print(f'You have entered {intToEngV2(x)}.')
-
-
