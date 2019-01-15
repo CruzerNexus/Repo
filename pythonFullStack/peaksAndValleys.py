@@ -2,14 +2,9 @@
 def peaks(data):
 	#goal: return indices of peaks
 	peaks = []
-	for num in range(len(data)):
+	for num in range(1, len(data)-1):
 		#run through each index of "data"
-		if num+1 ==len(data):
-			#if this is the final index, it will break the loop before index error
-			break
-		elif num == 0:
-			continue
-		elif data[num-1] < data[num] > data[num+1]:
+		if data[num-1] < data[num] > data[num+1]:
 			peaks.append(num)
 		else:
 			continue
@@ -17,12 +12,8 @@ def peaks(data):
 
 def valleys(data):
 	valleys = []
-	for num in range(len(data)):
-		if num + 1 == len(data):
-			break
-		elif num == 0:
-			continue
-		elif data[num-1] > data[num] < data[num+1]:
+	for num in range(1, len(data)-1):
+		if data[num-1] > data[num] < data[num+1]:
 			valleys.append(num)
 		else:
 			continue
@@ -31,11 +22,8 @@ def valleys(data):
 def peaksAndValleys(data):
 	peakList = peaks(data)
 	valleyList = valleys(data)
-	peaksAndValleys = []
-	peaksAndValleys.extend(peakList)
-	peaksAndValleys.extend(valleyList)
+	peaksAndValleys = peakList + valleyList
 	peaksAndValleys.sort()
-	print(peaksAndValleys)
 	return peaksAndValleys
 
 
